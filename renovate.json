@@ -1,0 +1,26 @@
+{
+  "baseBranches": [ "main" ],
+  "labels": ["renovate", "dependencies", "automation"],
+  "packageRules": [
+    {
+      "semanticCommitType": "fix",
+      "labels": ["renovate", "dependencies", "automation", "depCi", "npm"],
+      "prPriority": 0,
+      "matchDepTypes": ["dependencies"]
+    },
+    {
+      "semanticCommitType": "chore",
+      "labels": ["renovate", "dependencies", "automation", "devChore", "npm"],
+      "prPriority": -5,
+      "matchDepTypes": ["devDependencies"]
+    }
+  ],
+  "platform": "github",
+  "rangeStrategy": "pin",
+  "recreateClosed": true,
+  "rollbackPrs": true,
+  "semanticCommitType": "fix",
+  "semanticCommits": "enabled",
+  "unicodeEmoji": true,
+  "automerge": true
+}
